@@ -11,8 +11,8 @@
             if($conn -> query($sql) === TRUE){
                 session_start();
                     $_SESSION['auth'] = true;
-                    $_SESSION['email'] = $user['email'];
-                    Header('Location:profile.php');
+                    $_SESSION['email'] = $email;
+                    Header('Location:../profile.php');
             } else {
                 echo "Ошибка: ", $conn->error;
             }
