@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <!-- Подключение нужного -->
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="icon" href="#">
+
+        <title>ClientTracker: Администратор</title>
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container container">
+                <a href="admin_panel.html">
+                    <div class="logo">
+                        Сlient<span>traker</span>
+                    </div>
+                </a>
+
+                <a href="#" class="exit-button">Выйти</a>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main class="main admin-panel-main">
+
+            <!-- Для правильной индексации страницы -->
+            <h1 class="visually-hidden">ClientTracker: Администратор</h1>
+
+            <section class="admin-panel">
+
+                <!-- Для правильной индексации страницы -->
+                <h2 class="visually-hidden">Страница редактирования пользователя</h2>
+
+                <div class="admin-panel-container container">
+
+                    <p class="greetengs">Добро пожаловать, <span>Юзер!</span></p>
+
+                    <div class="card">
+                        <div class="card-heading darken-border-bottom d-flex align-items-center justify-content-center">
+                            <span class="blue-circule"></span>
+                            <h3 class="title-huge">Редактирование пользователя</h3>
+                            <span class="blue-circule"></span>
+                        </div>
+
+                        <div class="card-content">
+                            <form action="" class="form admin-panel-form">
+                                
+                                <div class="form-input-wrap">
+                                    <label for="formInput" class="form-label">Имя:</label>
+                                    <input type="text" class="form-input" pattern="[А-яа-я]+" title="Допускается только кириллица" maxlength="20" name="userFirstName" id="formInput" placeholder="Дима" required>
+                                </div>
+
+                                <div class="form-input-wrap">
+                                    <label for="formInput" class="form-label">Фамилия:</label>
+                                    <input type="text" class="form-input" pattern="[А-яа-я]+" title="Допускается только кириллица" maxlength="20" name="userLastName" id="formInput" placeholder="Петров" required>
+                                </div>
+
+                                <div class="form-input-wrap">
+                                    <label for="formInput" class="form-label">E-mail:</label>
+                                    <input type="email" class="form-input" maxlength="50" name="userEmail" id="formInput" placeholder="exAmple@mail.ru" required>
+                                </div>
+
+                                <div class="form-input-wrap">
+                                    <label for="formInput" class="form-label">Телефон:</label>
+                                    <input type="email" class="form-input" maxlength="12" name="userPhoneNumber" id="formInput" placeholder="+7xxxxxxxxxx" required>
+                                </div>
+
+                                <button class="button card-button bg-color-blue">Завершить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container container">
+                <p class="footer-description">2025 © clienttracker</p>
+                <p class="footer-description">Be The Client Manager</p>
+            </div>
+        </footer>
+    </body>
+</html>

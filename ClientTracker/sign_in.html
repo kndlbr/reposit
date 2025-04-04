@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <!-- Подключение нужного -->
+        <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="icon" href="#">
+
+        <title>ClientTracker: Авторизация</title>
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container sign-in container">
+                <div class="logo">
+                    Сlient<span>traker</span>
+                </div>
+
+                <p class="header-description d-none d-sm-flex">Система управления клиентами</p>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main class="main">
+
+            <!-- Для правильной индексации страницы -->
+            <h1 class="visually-hidden">ClientTracker: Страница авторизации</h1>
+
+            <section class="authorize">
+
+                <!-- Для правильной индексации страницы -->
+                <h2 class="visually-hidden">Форма авторизации</h2>
+
+                <div class="vh100-container container">
+                    <div class="card authorize-card">
+                        <div class="card-heading d-flex align-items-center">
+                            <span class="blue-circule"></span>
+                            <h3 class="title-huge">Авторизация</h3>
+                            <span class="blue-circule"></span>
+                        </div>
+
+                        <div class="card-content">
+                            <form action="" class="form authorize-form">
+
+                                <div class="form-input-wrap">
+                                    <label for="formInput" class="form-label">Логин:</label>
+                                    <input type="text" class="form-input" pattern="[A-Za-z0-9_]+" title="Допускается только латиница, цифры и спец. символ '_'" maxlength="20" name="userLogin" id="formInput" placeholder="exAmple_Login122" required>
+                                </div>
+
+                                <div class="form-input-wrap">
+                                    <label for="formInput"class="form-label">Пароль:</label>
+                                    <input type="password" class="form-input" minlength="8" maxlength="20" name="userPassword" id="formInput" placeholder="exAmple_Password122" required>
+                                </div>
+
+                                <button class="button card-button bg-color-blue">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container container">
+                <p class="footer-description">2025 © clienttracker</p>
+                <p class="footer-description">Be The Client Manager</p>
+            </div>
+        </footer>
+    </body>
+</html>

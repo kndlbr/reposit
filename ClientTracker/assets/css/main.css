@@ -1,0 +1,312 @@
+/* Подключаем доп.файлы */
+
+@import url(./reset.css);
+@import url(./fonts.css);
+
+/* Основное */
+:root{
+    --white-color: #FFFFFF;
+    --light-blue-color: #4C84FD;
+    --light-gray-color: #F3F3F3;
+    --gray-color: #828282;
+    --darken-color: #212121;
+    --red-color: #F94545;
+
+    --font-family-Montserrat: 'Montserrat', sans-serif;
+
+    --transition-duration: 0.3s;
+}
+
+body{
+    background-color: var(--light-gray-color);
+    font-family: var(--font-family-Montserrat);
+    font-size: clamp(14px, 1.39vw, 20px);
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+section + section{
+    margin-top: 30px;
+}
+
+.title-huge{
+    font-size: clamp(16px, 1.67vw, 24px);
+    color: var(--darken-color);
+    margin-inline: 15px;
+    text-align: center;
+    width: fit-content;
+}
+.blue-circule{
+    display: inline-flex;
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: var(--light-blue-color);
+    border-radius: 50%;
+}
+
+.form-input-wrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.form-input-wrap + .form-input-wrap{
+    margin-top: 16px;
+}
+.form-label{
+    margin: 0;
+    margin-left: 15px;
+    font-size: clamp(10px, 0.97vw, 14px);
+    font-weight: 600;
+}
+.form-input{
+    background-color: var(--light-gray-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: clamp(12px, 1.11vw, 16px);
+    caret-color: var(--light-blue-color);
+}
+.form-input:invalid{
+    outline: 2px solid var(--red-color);
+}
+.form-input:valid{
+    outline: 2px solid var(--light-blue-color);
+
+}
+
+.button{
+    display: inline-flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: clamp(16px, 1.67vw, 24px);
+    font-weight: 700;
+    color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 50px;
+    white-space: nowrap;
+}
+.button.bg-color-blue{
+    background-color: var(--light-blue-color);
+}
+.button.bg-color-red{
+    background-color: var(--red-color);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    padding: 32px;
+    width: 100%;
+}
+.card-content{
+    width: 100%;
+}
+.card-button{
+    margin-top: 32px;
+}
+.card-heading{
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.warning{
+    text-align: center;
+    font-weight: 500;
+}
+.warning span{
+    color: var(--light-blue-color);
+    font-weight: 700;
+}
+
+.darken-border-bottom{
+    border-bottom: 2px solid var(--darken-color);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+/* Header */
+.header{
+    background-color: var(--white-color);
+    padding-block: 25px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: fit-content;
+    font-size: clamp(20px, 2.22vw, 32px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-blue-color);
+}
+.logo span{
+    font-size: clamp(12px, 1.39vw, 20px);
+    color: var(--darken-color);
+}
+.header-description{
+    width: fit-content;
+}
+.exit-button{
+    text-decoration: none;
+    color: inherit;
+    transition-duration: var(--transition-duration);
+}
+.exit-button:hover{
+    color: var(--gray-color);
+}
+.exit-button:active{
+    color: var(--light-blue-color);
+}
+
+/* Main */
+
+/* Sign in page */
+/* Section authorize */
+.vh100-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 98px - 90px);
+    min-height: 450px;
+}
+.authorize-card{
+    width: clamp(350px, 27.78vw, 400px);
+}
+
+/* Profile page */
+/* Section profile */
+.greetengs{
+    font-size: clamp(16px, 1.67vw, 24px);
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.greetengs span{
+    color: var(--light-blue-color);
+}
+.user-info-list{
+    padding: 0;
+    list-style: none;
+}
+.user-info-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed var(--light-blue-color);
+    padding-bottom: 10px;
+}
+.user-info-item + .user-info-item{
+    margin-top: 16px;
+}
+.attribute.attribute-span{
+    font-weight: 600;
+    color: var(--light-blue-color);
+}
+
+/* Admin panel page */
+
+.admin-panel-main{
+    padding-block: 30px;
+}
+
+/* Section users list */
+.users-table-wrap{
+    overflow-x: auto;
+}
+.users-table{
+    width: 100%;
+}
+.users-table td{
+    width: 100px;
+}
+.table-heading-text{
+    padding-inline: 10px;
+    font-size: clamp(16px, 1.39vw, 20px);
+    white-space: nowrap;
+}
+.table-row-text{
+    padding-inline: 10px;
+    font-size: clamp(14px, 1.11vw, 16px);
+    white-space: nowrap;
+}
+.table-button + .table-button{
+    margin-top: 16px;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--white-color);
+    padding-block: 30px;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-container :nth-child(2){
+    text-align: right;
+}
+.footer-description{
+    width: fit-content;
+}
+
+/* Media */
+@media (max-width: 1399px){
+    .vh100-container{
+        height: calc(100vh - 96px - 88px);
+    }
+}
+
+@media (max-width: 1199px){
+    .vh100-container{
+        height: calc(100vh - 90px - 85px);
+    }
+}
+
+@media (max-width: 991px){
+    .vh100-container{
+        height: calc(100vh - 80px - 81px);
+    }
+
+    .card{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px){
+
+}
+
+@media (max-width: 575px){
+    .sign-in{
+        justify-content: center;
+    }
+}
